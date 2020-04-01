@@ -57,13 +57,7 @@ public class Item
     //Comparison Methods
     public int compareByName(Item item)
     {
-        //TODO: Finish implementation
-        int diff=0;
-        for(int i = 0; i<this.name.length() || i<item.name.length(); i++)
-        {
-            diff += this.name.charAt(i)-item.name.charAt(i);
-        }
-        return diff;
+        return this.name.compareToIgnoreCase(item.name);
     }
 
     public int compareByQuantity(Item item)
