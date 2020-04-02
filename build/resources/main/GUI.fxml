@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane minHeight="800.0" minWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.nickwetter.GUI.ViewController">
+   <top>
+      <VBox BorderPane.alignment="CENTER">
+         <children>
+            <MenuBar>
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Close" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Delete" />
+                  </items>
+                </Menu>
+                  <Menu mnemonicParsing="false" text="Sort">
+                    <items>
+                      <MenuItem mnemonicParsing="false" text="Action 1" />
+                    </items>
+                  </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </children>
+      </VBox>
+   </top>
+   <center>
+      <TableView maxHeight="5000.0" maxWidth="5000.0" prefHeight="731.0" prefWidth="813.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn minWidth="-1.0" prefWidth="245.0" text="Name" />
+          <TableColumn maxWidth="204.66665649414062" minWidth="-1.0" prefWidth="101.33334350585938" text="Quantity" />
+            <TableColumn maxWidth="284.0000305175781" minWidth="-1.0" prefWidth="139.66665649414062" text="ID" />
+            <TableColumn maxWidth="344.0" minWidth="-1.0" prefWidth="127.99996948242188" text="Price Per Unit" />
+            <TableColumn minWidth="-1.0" prefWidth="196.33331298828125" text="Total Price" />
+        </columns>
+      </TableView>
+   </center>
+   <bottom>
+      <HBox prefHeight="38.0" prefWidth="1204.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox prefHeight="63.0" prefWidth="1204.0">
+               <children>
+                  <HBox prefHeight="27.0" prefWidth="1091.0" spacing="10.0">
+                     <children>
+                        <HBox prefHeight="27.0" prefWidth="145.0">
+                           <children>
+                              <Button mnemonicParsing="false" text="-">
+                                 <HBox.margin>
+                                    <Insets left="86.0" right="5.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button mnemonicParsing="false" text="+">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                        </HBox>
+                        <HBox>
+                           <children>
+                              <Button mnemonicParsing="false" text="-">
+                                 <HBox.margin>
+                                    <Insets left="745.0" right="5.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button mnemonicParsing="false" text="+" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="0.0" prefWidth="1204.0">
+                     <children>
+                        <Label prefHeight="25.0" prefWidth="90.0" text="Source Code:" />
+                        <Hyperlink prefHeight="25.0" prefWidth="54.0" text="Github" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </bottom>
+   <left>
+      <HBox prefHeight="739.0" prefWidth="144.0" BorderPane.alignment="CENTER">
+         <children>
+            <TableView prefHeight="747.0" prefWidth="162.0">
+               <columns>
+                  <TableColumn minWidth="-1.0" prefWidth="142.0" resizable="false" text="Sublist" />
+               </columns>
+            </TableView>
+         </children>
+      </HBox>
+   </left>
+   <right>
+      <VBox prefHeight="746.0" prefWidth="247.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label id="noteLabel" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="60.0" text="Notes" />
+            <TextArea prefHeight="353.0" prefWidth="247.0" />
+            <Separator prefHeight="14.0" prefWidth="247.0" />
+            <ImageView fitHeight="354.0" fitWidth="243.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </VBox>
+   </right>
+</BorderPane>
