@@ -26,6 +26,14 @@ public class Main
         list.listAllItems();
         */
 
+        ParentList list = ParentList.getInstance();
+
+        Item chair = new Item.ItemBuilder("Chair",5).setPricePerUnit(34.21).build();
+        Item bench = new Item.ItemBuilder("Bench", 2).build();
+        list.addItem(chair);
+        list.addItem(bench);
+
+
         GUIMain.launchWindow(args);
 
 

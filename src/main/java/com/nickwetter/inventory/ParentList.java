@@ -32,6 +32,11 @@ public class ParentList
         return instance;
     }
 
+    public SubList getSelectedSublist(){return this.selectedSublist;}
+
+    public List<SubList> getSublists(){return this.list;}
+
+
     //List functionality methods
     private SubList getByName(String name)
     {
@@ -49,6 +54,21 @@ public class ParentList
             list.add(factory.createSublist(name));
         else
             System.out.println("There is already a sublist with that name!");
+    }
+
+    public boolean addSublist(SubList sublist)
+    {
+        boolean flag = false;
+        if(getByName(sublist.getName())==null)
+        {
+            list.add(sublist);
+            flag=true;
+        }
+        else
+        {
+            System.out.println("There is already a sublist with that name!");
+        }
+        return flag;
     }
 
     public void removeSublist(String name)

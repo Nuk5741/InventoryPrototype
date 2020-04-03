@@ -22,6 +22,8 @@ public class SubList
         return name;
     }
 
+    public List<Item> getList() {return this.list;}
+
     //Only to be called when removing a sublist from parentlist
     protected static void decrementCount()
     {
@@ -56,7 +58,7 @@ public class SubList
 
     public void addItem(Item item)
     {
-        if(getByName(item.getName()) == null && getByID(item.getID()) == null)
+        if(getByName(item.getName()) == null)
             list.add(item);
         else
             System.out.println("There is already an item with that name/ID!");
